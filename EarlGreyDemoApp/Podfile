@@ -1,0 +1,9 @@
+
+target 'EarlGreyDemoApp' do
+  pod 'EarlGreyApp'
+end
+
+target 'EarlGreyDemoAppUITests' do
+  pod 'EarlGreyTest'
+  pod 'eDistantObject', '0.9.0'
+end
