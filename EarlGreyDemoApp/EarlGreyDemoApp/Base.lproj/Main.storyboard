@@ -40,7 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="labe" destination="hgw-WK-F6B" id="Ocx-p7-hVE"/>
+                        <outlet property="label" destination="hgw-WK-F6B" id="LyZ-7Z-68m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

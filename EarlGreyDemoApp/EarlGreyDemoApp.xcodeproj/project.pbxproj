@@ -10,7 +10,6 @@
 		3985B85CB258874D894A17BC /* libPods-EarlGreyDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6512E5D294651EF8E6192A /* libPods-EarlGreyDemoApp.a */; };
 		8B82C9CE5F5A1BBC3C37CCF2 /* libPods-EarlGreyDemoAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DA03D8554E95240C0F7351 /* libPods-EarlGreyDemoAppUITests.a */; };
 		E82B819F24D69D07007880B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E82B819E24D69D07007880B3 /* AppDelegate.m */; };
-		E82B81A224D69D07007880B3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E82B81A124D69D07007880B3 /* SceneDelegate.m */; };
 		E82B81A524D69D07007880B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82B81A424D69D07007880B3 /* ViewController.m */; };
 		E82B81A824D69D07007880B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82B81A624D69D07007880B3 /* Main.storyboard */; };
 		E82B81AA24D69D08007880B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82B81A924D69D08007880B3 /* Assets.xcassets */; };
@@ -39,8 +38,6 @@
 		E82B819A24D69D07007880B3 /* EarlGreyDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarlGreyDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82B819D24D69D07007880B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E82B819E24D69D07007880B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E82B81A024D69D07007880B3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		E82B81A124D69D07007880B3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		E82B81A324D69D07007880B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E82B81A424D69D07007880B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E82B81A724D69D07007880B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 				8CEBD5D80E2447095EC2BE5C /* Pods-EarlGreyDemoAppUITests.debug.xcconfig */,
 				55D0EB5A269EE173500286E0 /* Pods-EarlGreyDemoAppUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -119,8 +115,6 @@
 			children = (
 				E82B819D24D69D07007880B3 /* AppDelegate.h */,
 				E82B819E24D69D07007880B3 /* AppDelegate.m */,
-				E82B81A024D69D07007880B3 /* SceneDelegate.h */,
-				E82B81A124D69D07007880B3 /* SceneDelegate.m */,
 				E82B81A324D69D07007880B3 /* ViewController.h */,
 				E82B81A424D69D07007880B3 /* ViewController.m */,
 				E82B81A624D69D07007880B3 /* Main.storyboard */,
@@ -152,7 +146,7 @@
 				E82B819624D69D07007880B3 /* Sources */,
 				E82B819724D69D07007880B3 /* Frameworks */,
 				E82B819824D69D07007880B3 /* Resources */,
-				3E7C8C4833D318366889BD99 /* [CP] Embed Pods Frameworks */,
+				DEE889838334776969752651 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,23 +234,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E7C8C4833D318366889BD99 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EarlGreyDemoApp/Pods-EarlGreyDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EarlGreyDemoApp/Pods-EarlGreyDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EarlGreyDemoApp/Pods-EarlGreyDemoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		78BFC9E296A292EA734C7A56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +278,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DEE889838334776969752651 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EarlGreyDemoApp/Pods-EarlGreyDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EarlGreyDemoApp/Pods-EarlGreyDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EarlGreyDemoApp/Pods-EarlGreyDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -311,7 +305,6 @@
 				E82B81A524D69D07007880B3 /* ViewController.m in Sources */,
 				E82B819F24D69D07007880B3 /* AppDelegate.m in Sources */,
 				E82B81B024D69D08007880B3 /* main.m in Sources */,
-				E82B81A224D69D07007880B3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
